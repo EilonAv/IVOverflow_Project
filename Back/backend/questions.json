@@ -1,0 +1,318 @@
+[{
+  "_id": {
+    "$oid": "61f5fe39bd19dc1d65b480bf"
+  },
+  "user_ref": {
+    "$oid": "61f1afbda03bc2e582d67e0b"
+  },
+  "title": "Question 1 ",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non.",
+  "tags": [
+    "t1",
+    "t2",
+    "t3"
+  ],
+  "answers": [
+    {
+      "user_ref": {
+        "$oid": "61f1afbda03bc2e582d67e0b"
+      },
+      "content": "Answer 1 ",
+      "upvote": [
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        }
+      ],
+      "downvote": [
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        }
+      ],
+      "_id": {
+        "$oid": "61f5fe54bd19dc1d65b480de"
+      }
+    },
+    {
+      "user_ref": {
+        "$oid": "61f1afbda03bc2e582d67e0b"
+      },
+      "content": "Answer 2 ",
+      "upvote": [
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        }
+      ],
+      "downvote": [
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        }
+      ],
+      "_id": {
+        "$oid": "61f5ff102a5e710bd83c2a48"
+      }
+    },
+    {
+      "user_ref": {
+        "$oid": "61f1afd5a03bc2e582d67e0d"
+      },
+      "content": "Answer 3 ",
+      "upvote": [],
+      "downvote": [],
+      "_id": {
+        "$oid": "61f5ff382a5e710bd83c2a62"
+      }
+    }
+  ],
+  "votes": 17,
+  "createdAt": {
+    "$date": "2022-01-30T02:55:53.446Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-30T04:55:13.013Z"
+  },
+  "__v": 46
+},{
+  "_id": {
+    "$oid": "61f5fe7fbd19dc1d65b48102"
+  },
+  "user_ref": {
+    "$oid": "61f1afbda03bc2e582d67e0b"
+  },
+  "title": "Question 2 ",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis ante ac tellus eleifend commodo. Aliquam eleifend, diam ut tempor.",
+  "tags": [
+    "t2",
+    "t3",
+    "t4"
+  ],
+  "answers": [
+    {
+      "user_ref": {
+        "$oid": "61f1afbda03bc2e582d67e0b"
+      },
+      "content": "Answer 1 question 2 ",
+      "upvote": [],
+      "downvote": [
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        },
+        {
+          "$oid": "61f1afbda03bc2e582d67e0b"
+        }
+      ],
+      "_id": {
+        "$oid": "61f5fedbbd19dc1d65b48121"
+      }
+    }
+  ],
+  "votes": -7,
+  "createdAt": {
+    "$date": "2022-01-30T02:57:03.702Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-30T02:59:17.820Z"
+  },
+  "__v": 8
+},{
+  "_id": {
+    "$oid": "61f5fea1bd19dc1d65b4810b"
+  },
+  "user_ref": {
+    "$oid": "61f1afbda03bc2e582d67e0b"
+  },
+  "title": "Question 3 ",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin tortor eget cursus sodales. Nullam at lorem auctor, consectetur neque id, condimentum est. Maecenas odio est, ornare vel leo et, aliquam dictum dui. Vivamus sit amet vestibulum sapien. Pellentesque semper metus risus, et euismod nulla feugiat ac. Donec non lobortis.",
+  "tags": [
+    "t3",
+    "t4",
+    "t5"
+  ],
+  "answers": [],
+  "votes": 0,
+  "createdAt": {
+    "$date": "2022-01-30T02:57:37.192Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-30T02:57:37.192Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f5fec5bd19dc1d65b48114"
+  },
+  "user_ref": {
+    "$oid": "61f1afbda03bc2e582d67e0b"
+  },
+  "title": "Question 4 ",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim ultricies varius. Integer eu neque ornare, ultrices neque vel, tristique erat. Phasellus molestie faucibus ante, ut viverra risus auctor eget. Sed ut viverra magna, sed elementum tortor. Integer dignissim ultricies metus, lobortis rutrum neque vehicula vel. Vivamus mi urna, congue in erat sit amet, efficitur tincidunt ex. Vestibulum elementum tristique dolor, a lobortis purus blandit commodo. Pellentesque ut finibus quam. Quisque semper, velit ut dignissim consectetur, sapien turpis sodales felis, ac aliquet urna orci eget ex. Mauris sit amet risus sit amet ex varius aliquet ac at quam. Nam nisl.",
+  "tags": [
+    "t1",
+    "t4",
+    "t5",
+    "t6"
+  ],
+  "answers": [],
+  "votes": 0,
+  "createdAt": {
+    "$date": "2022-01-30T02:58:13.949Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-30T02:58:13.949Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61f5ff292a5e710bd83c2a54"
+  },
+  "user_ref": {
+    "$oid": "61f1afd5a03bc2e582d67e0d"
+  },
+  "title": "Question 5 ",
+  "content": "Lorem",
+  "tags": [
+    "t3",
+    "t5",
+    "t1"
+  ],
+  "answers": [],
+  "votes": 0,
+  "createdAt": {
+    "$date": "2022-01-30T02:59:53.833Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-30T02:59:53.833Z"
+  },
+  "__v": 0
+}]
