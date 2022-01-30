@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import QuestionAnswer from './questionAnswer';
 import AllQuestions from './allQuestions';
-import {  FormControl } from 'react-bootstrap';
 import { Routes, Route , Link} from 'react-router-dom';
 import NewQuestion from './newQuestion';
 import Search from './search';

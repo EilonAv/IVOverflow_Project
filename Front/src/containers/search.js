@@ -1,8 +1,8 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react';
 import { FormControl } from 'react-bootstrap';
-import { Route, useNavigate } from 'react-router-dom';
-import SearchResults from './searchResults';
+import { useNavigate } from 'react-router-dom';
+
 
 function Search() {
   const navigate = useNavigate();
@@ -11,7 +11,10 @@ function Search() {
 }, []);
 
   const handleChange = async e => {
-    navigate('/searchResults/'+ e.target.value);
+    if(e.target.value.length > 0)
+        navigate('/searchResults/'+ e.target.value);
+    else
+        navigate('/');
     console.log(e.target.value);
   };
 

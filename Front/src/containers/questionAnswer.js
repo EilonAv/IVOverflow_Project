@@ -12,6 +12,7 @@ const QuestionAnswer = function() {
 
     const [question, setQuestion] = useState({});
     const [answerList, setAnswerList] = useState([]);
+    const [voteChange, setVoteChange] = useState(0);
     const [newAnswerContent,setNewAnswerContent] = useState("");
     const q_id = useParams();
     const validateForm = function () {
@@ -37,9 +38,8 @@ const QuestionAnswer = function() {
       
     }, []);
     
-    
-    function upVoteHandle (){
-
+    function voteNum(up,down){
+        return up-down;
     }
     function upVoteAdd (question,answer){
         
@@ -53,14 +53,11 @@ const QuestionAnswer = function() {
                 jwt:localStorage.jwt
             },
         }).then(res => {
-            //hide upVote button
+            setVoteChange(1-voteChange)
             })
             .catch(function(error) {
                 console.log(error);
             })
-
-    }
-    function downVoteHandle (){
 
     }
     function downVoteSub (question,answer){
@@ -74,7 +71,7 @@ const QuestionAnswer = function() {
                 jwt:localStorage.jwt
             },
         }).then(res => {
-            //hide downVote button
+            setVoteChange(7);
             })
             .catch(function(error) {
                 console.log(error);
@@ -137,10 +134,9 @@ const QuestionAnswer = function() {
                             <Row>
                                 <Col className ="votecounter" md ={2}>
                                     <div>
-                                        <p></p>
                                         <FaArrowUp className="upVoteButton" onClick={()=>{return upVoteAdd(question,answer)}} />
                                         <br />
-                                        {answer.upvote.length - answer.downvote.length}
+                                        {voteNum(answer.upvote.length,answer.downvote.length)}
                                         <br />
                                         <FaArrowDown className="downVoteButton"onClick={()=>{return downVoteSub(question,answer)}} />
                                     </div>

@@ -20,7 +20,8 @@ const SearchResults = function() {
           results.filter(question => {
               return(
                   question.content.toLowerCase().includes(searchField.toLowerCase()) ||
-                  question.title.toLowerCase().includes(searchField.toLowerCase())     
+                  question.title.toLowerCase().includes(searchField.toLowerCase()) ||
+                  question.tags.includes(searchField.toLowerCase())    
               )
           }
           )
