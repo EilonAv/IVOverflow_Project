@@ -1,0 +1,190 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.submit_button {
+  margin-top: 20px;
+}
+
+.navbar_example{
+display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:lightgrey
+}
+
+.navbar_example > * {margin-right:10px;}
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  .newQuestion text {
+    padding: 60px 0;
+  }
+  
+  .newQuestion form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  .newQuestion textarea {
+    resize: none;
+}
+
+.loginLogo {
+    width: 200px;
+    height: 200px;
+}
+.questionContainer:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+    
+
+}
+.questionList {
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+.counters div {
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.questionTitle{
+    font-weight: bold;
+     font-size: 20px;
+}
+.questionContent{
+    text-align: left;
+     font-size: 15px;
+}
+.questionBottom div {
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.questionTags{
+    text-align: left;
+}
+.questionAnswerContainer {
+    margin: 0 auto;
+    max-width: 640px;
+}
+.answerList {
+    margin: 0 auto;
+    max-width: 640px;
+}
+.questionAnswerTitle{
+    font-weight: bold;
+     font-size: 20px;
+     text-align: left;
+}
+.questionAnswerTitle p {
+     font-size: 13px;
+     margin: 0 auto;
+     padding: 0 0;
+
+}
+.answersTitle {
+    text-align: left;
+}
+
+.singleTag{
+    display: inline-block;
+    margin-right: 5px;
+}
+.votecounter{
+    margin: 0 auto;
+}
+.answerUser {
+     text-align: right;
+     font-size: 13px;
+     font-weight: bold;
+}
+.answerTextArea {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    max-width: 640px;
+    text-align: left;
+}
+.answerTextArea Label {
+  font-weight: bold;
+}
+.submitAnswer{
+align-items: right;
+}
+
+
+
+}
+
+.navbar_container{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+}
+
+.side_right{
+  display:flex;
+  justify-content: space-between;
+}
+
+.navbar_sides{
+  flex:1;
+  padding: 0 8px;
+
+}
+
+.search_container {
+  width: 640px;
+}
+
+.page{padding:40px 0;}
+
+textarea {
+  resize:none;
+}
+.navLogo img{
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+
+}
