@@ -132,8 +132,8 @@ const QuestionAnswer = function() {
                 return <ListGroup.Item className="answerContainer" key = {i}>
                         <Container  fluid >
                             <Row>
-                                <Col className ="votecounter" md ={2}>
-                                    <div>
+                                <Col  md ={2}>
+                                    <div className ="votecounter">
                                         <FaArrowUp className="upVoteButton" onClick={()=>{return upVoteAdd(question,answer)}} />
                                         <br />
                                         {voteNum(answer.upvote.length,answer.downvote.length)}

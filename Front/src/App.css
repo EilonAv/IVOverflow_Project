@@ -131,6 +131,7 @@ display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:ligh
 }
 .votecounter{
     margin: 0 auto;
+    margin-right:30px;
 }
 .answerUser {
      text-align: right;
