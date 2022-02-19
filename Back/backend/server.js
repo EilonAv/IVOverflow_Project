@@ -17,7 +17,6 @@ const port = process.env.PORT || 80;
 app.use(cors());
 app.use(express.json());
 
-
 //Establish database connection
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri, { useNewUrlParser:true  });
@@ -53,8 +52,6 @@ app.post("/login", async (req, res) => {
         }
       );
       //saving jwt on db for each user
-
-  
       user.jwtoken = token;
       user.save();
       res.status(200).json({
@@ -141,7 +138,7 @@ app.post('/newQuestion', async (req, res) => {
 
     })
     console.log("new Question added");
-    res.status(200).json(user);
+    res.status(200).json(question);
   }
   catch(err){
     console.log(err);
@@ -157,18 +154,17 @@ app.post('/newAnswer', async (req, res) => {
     const user = await User.findOne({ email });
     user_id = user._id;
     const question = await Question.findById( question_id );
-    const answer = new Answer({
+    const answer = await new Answer({
       user_ref: user_id,
       content: content,
-    })
-
+    }).populate('user_ref')
+    console.log(answer);
     question.answers.push(answer);
     question.save();
 
+    console.log("1 Question answer updated");
 
-    console.log("1 Question updated");
-
-    res.status(200);
+    res.status(200).json(answer);
   }
   catch(err){
     console.log(err);

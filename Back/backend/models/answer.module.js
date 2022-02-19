@@ -6,8 +6,8 @@ const Schema = mongoose.Schema;
 const answerSchema = new mongoose.Schema({
     user_ref: { type: mongoose.ObjectId, ref: User},
     content: { type: String},
-    upvote: {type: Array },
-    downvote: {type: Array }
+    upvote: {type: Array ,default: []},
+    downvote: {type: Array ,default: []}
 
 },{timestamps: true});
 
