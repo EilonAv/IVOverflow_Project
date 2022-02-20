@@ -31,6 +31,8 @@ const Login = function() {
       console.log(res);
       window.localStorage.setItem('email',email);
       window.localStorage.setItem('jwt',res.data.jwtoken.toString());
+      setEmail('');
+      setPassword('');
       navigate('/');
   })
 

@@ -72,16 +72,8 @@ display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:ligh
     width: 200px;
     height: 200px;
 }
-.questionContainer:hover {
-    background-color: lightgrey;
-    cursor: pointer;
-    
 
-}
-.questionList {
-    margin: 0 auto;
-    max-width: 640px;
-}
+
 
 .counters div {
     margin: 0 auto;

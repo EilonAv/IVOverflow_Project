@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
 import React from "react";
+import { useDispatch } from "react-redux";
+import { userSetReducer } from "store/userInfoSlice";
+
 
 
 
@@ -18,6 +21,7 @@ function App() {
     console.log("App starts");
     //navigating between components instance
     const navigate = useNavigate();
+    const dispatch = useDispatch();
    
 
 
@@ -40,6 +44,8 @@ function App() {
                 jwt
             },
         }).then(res => {
+            dispatch(userSetReducer(res.data))
+            
         }).catch(function(error) {
             navigate('/login');
         })

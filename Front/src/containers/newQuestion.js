@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Form, Modal, Button } from "react-bootstrap";
 import axios from "axios";
-import { newQuestionReducer } from "../allQuestionsSlice";
-import { useDispatch } from "react-redux";
+import { newQuestionReducer } from "../store/allQuestionsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectUser } from "store/userInfoSlice";
 
 const NewQuestion = function () {
   const [newQuestionTitle, setNewQuestionTitle] = useState("");
   const [newQuestionContent, setNewQuestionContent] = useState("");
   const [newQuestionTags, setNewQuestionTags] = useState("");
   const [show, setShow] = useState(false);
+  const userInfo = useSelector(selectUser)
   const handleClose = () => {
     // clear form and hiding it
     setNewQuestionTitle("");
@@ -47,7 +49,7 @@ const NewQuestion = function () {
         title: newQuestionTitle,
         content: newQuestionContent,
         tags: tags,
-        email: localStorage.email,
+        email: userInfo.email,
         jwt: localStorage.jwt,
       },
     })

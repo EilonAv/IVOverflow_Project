@@ -12,10 +12,12 @@ import {
   selectQuestion,
   questionReducer,
   selectAnswers,
-} from "questionAnswerSlice";
+} from "../store/questionAnswerSlice";
+import { selectUser } from "store/userInfoSlice";
 
 const QuestionAnswer = function () {
   const dispatch = useDispatch();
+  const userInfo = useSelector(selectUser)
   const question = useSelector(selectQuestion);
   const [questionDB, setQuestionDB] = useState({});
   const answerList = useSelector(selectAnswers);
@@ -57,7 +59,7 @@ const QuestionAnswer = function () {
       data: {
         question_id: question._id,
         answer_id: answer._id,
-        email: localStorage.email,
+        email: userInfo.email,
         jwt: localStorage.jwt,
       },
     })
@@ -75,7 +77,7 @@ const QuestionAnswer = function () {
       data: {
         question_id: question._id,
         answer_id: answer._id,
-        email: localStorage.email,
+        email: userInfo.email,
         jwt: localStorage.jwt,
       },
     })
@@ -98,7 +100,7 @@ const QuestionAnswer = function () {
       data: {
         question_id: question._id,
         content: newAnswerContent,
-        email: localStorage.email,
+        email: userInfo.email,
         jwt: localStorage.jwt,
       },
     })

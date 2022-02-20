@@ -4,6 +4,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import axios from "axios";
 import { Container, Col, Row,Badge } from "react-bootstrap";
 import moment from 'moment'
+import { selectUser } from "store/userInfoSlice";
+import { useSelector } from "react-redux";
 
 const SearchResults = function() {
 
@@ -11,6 +13,7 @@ const SearchResults = function() {
     const searchUrl = useParams();
     const searchField = searchUrl.id;
     const [questionList, setQuestionList] = useState([]);
+    const userInfo = useSelector(selectUser)
     
  
 
