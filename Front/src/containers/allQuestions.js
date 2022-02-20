@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import ListGroup from "react-bootstrap/ListGroup";
 import axios from "axios";
-import { Container, Col, Row, Badge } from "react-bootstrap";
+import { Container, Col, Badge } from "react-bootstrap";
 import moment from "moment";
 import {
   selectQuestions,
   allQuestionsReducer,
 } from "../store/allQuestionsSlice";
-import { selectUser } from "store/userInfoSlice";
 import { QuestionList } from "./styles/QuestionList.style";
 import { QuestionContainer } from "./styles/QuestionContainer.style";
 import { FlexRow } from "./styles/FlexRow.style";
@@ -18,7 +16,6 @@ import { FlexColumn} from "./styles/FlexColumn.style";
 const AllQuestions = function () {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const userInfo = useSelector(selectUser);
   const questionList = useSelector(selectQuestions);
 
   useEffect(() => {

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import QuestionAnswer from "./questionAnswer";
 import AllQuestions from "./allQuestions";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import NewQuestion from "./newQuestion";
 import Search from "./search";
 import SearchResults from "./searchResults";

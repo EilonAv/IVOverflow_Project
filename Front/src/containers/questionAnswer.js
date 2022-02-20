@@ -19,9 +19,7 @@ const QuestionAnswer = function () {
   const dispatch = useDispatch();
   const userInfo = useSelector(selectUser)
   const question = useSelector(selectQuestion);
-  const [questionDB, setQuestionDB] = useState({});
   const answerList = useSelector(selectAnswers);
-  const [answerListDB, setAnswerListDB] = useState([]);
   const [voteChange, setVoteChange] = useState(0);
   const [newAnswerContent, setNewAnswerContent] = useState("");
   const q_id = useParams();
@@ -40,9 +38,7 @@ const QuestionAnswer = function () {
     })
       .then((res) => {
         dispatch(questionReducer(res.data));
-        //setQuestion(res.data);
         dispatch(allAnswersReducer(res.data.answers));
-        //setAnswerList(res.data.answers);
       })
       .catch(function (error) {
         console.log(error);
