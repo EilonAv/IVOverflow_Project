@@ -2,21 +2,8 @@
   margin-top: 20px;
 }
 
-.navbar_example{
-display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:lightgrey
-}
-
-.navbar_example > * {margin-right:10px;}
-
 @media all and (min-width: 480px) {
-  .Login {
-    padding: 60px 0;
-  }
 
-  .Login form {
-    margin: 0 auto;
-    max-width: 320px;
-  }
   .newQuestion text {
     padding: 60px 0;
   }
@@ -29,30 +16,6 @@ display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:ligh
     resize: none;
 }
 
-.loginLogo {
-    width: 200px;
-    height: 200px;
-}
-
-.counters div {
-    margin: 0 auto;
-    padding: 15px 0;
-}
-.questionTitle{
-    font-weight: bold;
-     font-size: 20px;
-}
-.questionContent{
-    text-align: left;
-     font-size: 15px;
-}
-.questionBottom div {
-    margin: 0 auto;
-    padding: 15px 0;
-}
-.questionTags{
-    text-align: left;
-}
 .questionAnswerContainer {
     margin: 0 auto;
     max-width: 640px;
@@ -76,10 +39,6 @@ display:flex;width: 320px;margin:0 auto;margin-bottom:50px;background-color:ligh
     text-align: left;
 }
 
-.singleTag{
-    display: inline-block;
-    margin-right: 5px;
-}
 .votecounter{
     margin: 0 auto;
     margin-right:30px;

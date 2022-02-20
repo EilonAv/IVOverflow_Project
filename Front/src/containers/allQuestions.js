@@ -11,7 +11,12 @@ import {
 import { QuestionList } from "./styles/QuestionList.style";
 import { QuestionContainer } from "./styles/QuestionContainer.style";
 import { FlexRow } from "./styles/FlexRow.style";
-import { FlexColumn} from "./styles/FlexColumn.style";
+import { QuestionTag } from "./styles/QuestionTag.style";
+import { QuestionTags } from "./styles/QuestionTags.style";
+import { QuestionTitle } from "./styles/QuestionTitle.style";
+import { QuestionContent } from "./styles/QuestionContent.style";
+import { QuestionFooter } from "./styles/QuestionFooter.style";
+import { QuestionCounters } from "./styles/QuestionCounters.style";
 
 const AllQuestions = function () {
   const navigate = useNavigate();
@@ -36,60 +41,60 @@ const AllQuestions = function () {
   return (
     <div>
       <QuestionList>
-          {questionList.map((question, i) => {
-            return (
-              <QuestionContainer
-                onClick={() => {
-                  return navigateQuestion(question._id);
-                }}
-                key={i}
-              >
-                <Container fluid>
+        {questionList.map((question, i) => {
+          return (
+            <QuestionContainer
+              onClick={() => {
+                return navigateQuestion(question._id);
+              }}
+              key={i}
+            >
+              <FlexRow>
+                <Col md={2}>
+                    <QuestionCounters>
+                  <div>
+                    {question.votes}
+                    <br></br>
+                    votes
+                  </div>
+                  <div>
+                    {question.answers.length}
+                    <br></br>
+                    answers
+                  </div>
+                  </QuestionCounters>
+                </Col>
+                <Col md={10}>
+                  <QuestionTitle>
+                    <FlexRow>{question.title}</FlexRow>
+                  </QuestionTitle>
+                  <QuestionContent>
+                    <FlexRow>{question.content}</FlexRow>
+                  </QuestionContent>
+                  <QuestionFooter>
                   <FlexRow>
-                    <Col className="counters" md={2}>
-                      <div>
-                        {question.votes}
-                        <br></br>
-                        votes
-                      </div>
-                      <div>
-                        {question.answers.length}
-                        <br></br>
-                        answers
-                      </div>
+                    <Col md={9}>
+                      <QuestionTags>
+                        {question.tags.map((tag, j) => {
+                          return <QuestionTag key={j}>{tag}</QuestionTag>;
+                        })}
+                      </QuestionTags>
                     </Col>
-                    <Col md={10}>
-                      <FlexRow className="questionTitle">{question.title}</FlexRow>
-                      <FlexRow className="questionContent">{question.content}</FlexRow>
-                      <FlexRow className="questionBottom">
-                        <Col className="questionTags" md={9}>
-                          {question.tags.map((tag, j) => {
-                            return (
-                              <Badge
-                                className="singleTag"
-                                key={j}
-                                pill
-                                bg="info"
-                              >
-                                {tag}
-                              </Badge>
-                            );
-                          })}
-                        </Col>
-                        <Col md={3}>
-                          <b>Asked: </b>
-                          {moment(question.createdAt).format("DD/MM/YY")}
-                          <br />
-                          <b>By: </b>
-                          {question.user_ref.nickname}
-                        </Col>
-                      </FlexRow>
+
+                    <Col md={3}>
+                      <b>Asked: </b>
+                      {moment(question.createdAt).format("DD/MM/YY")}
+                      <br />
+                      <b>By: </b>
+                      {question.user_ref.nickname}
                     </Col>
                   </FlexRow>
-                </Container>
-              </QuestionContainer>
-            );
-          })}
+                  </QuestionFooter>
+                </Col>
+              </FlexRow>
+            </QuestionContainer>
+          );
+        })}
       </QuestionList>
     </div>
   );
