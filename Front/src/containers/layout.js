@@ -5,45 +5,39 @@ import { Routes, Route, Link } from "react-router-dom";
 import NewQuestion from "./newQuestion";
 import Search from "./search";
 import SearchResults from "./searchResults";
+import { NavBarContainer } from "./styles/NavBarContainer.style";
+import { NavBarLogo } from "./styles/NavBarLogo.style";
+import { LayoutContent } from "./styles/LayoutContent.style";
 
 function deleteAuths() {
   localStorage.removeItem("email");
   localStorage.removeItem("jwt");
 }
 const Layout = function () {
-
   return (
     <div>
-      <div className="navbar_container">
-        <div className="navbar_sides left">
-          <Link to="/" className="navLogo">
-            <img
-              src={
-                "https://ianvanheusen.com/wp-content/uploads/2015/09/flow.jpg"
-              }
-              alt="Logo"
-            />
-          </Link>
+      <NavBarContainer>
+        <Link to="/">
+          <NavBarLogo
+            src={"https://ianvanheusen.com/wp-content/uploads/2015/09/flow.jpg"}
+            alt="Logo"
+          />
+        </Link>
+        <Search />
+        <NewQuestion />
+        <Link to="/login" onClick={deleteAuths}>
+          Logout
+        </Link>
+      </NavBarContainer>
+      <LayoutContent>
+        <div className="page">
+          <Routes>
+            <Route path="/" element={<AllQuestions />} />
+            <Route path="/searchResults/:id" element={<SearchResults />} />
+            <Route path="/questionAnswer/:id" element={<QuestionAnswer />} />
+          </Routes>
         </div>
-        <div className="search_container">
-          <Search />
-        </div>
-        <div className="navbar_sides side_right">
-          <NewQuestion />
-          <Link to="/login" onClick={deleteAuths}>
-            Logout
-          </Link>
-        </div>
-      </div>
-
-      <div className="page">
-        <Routes>
-          <Route path="/" element={<AllQuestions />} />
-          <Route path="/searchResults/:id" element={<SearchResults />} />
-          <Route path="/questionAnswer/:id" element={<QuestionAnswer />} />
-          
-        </Routes>
-      </div>
+      </LayoutContent>
     </div>
   );
 };
